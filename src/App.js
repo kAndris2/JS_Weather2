@@ -15,7 +15,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       inputState: undefined,
-      city: 'Budapest'
+      city: 'Eger'
     }
   }
 
