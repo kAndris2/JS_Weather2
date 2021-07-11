@@ -13,7 +13,7 @@ class Weather extends React.Component {
     handleWeatherResponse = this.handleWeatherResponse.bind(this);
 
     fetchWeather(cityName) {
-        const key = 'X1T4HSVB1SFR2JDVHVUML7T5S';
+        const key = 'VGI4KGKVXS1W2461TTPDAZ1CK';
         const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/forecast?aggregateHours=1&combinationMethod=aggregate&contentType=json&unitGroup=metric&locationMode=single&key=${key}&locations=${cityName}%20`;
         fetch(url)
         .then(res => res.json())
@@ -25,7 +25,6 @@ class Weather extends React.Component {
             loaded: true,
             cityData: response
         });
-        console.log(response);
     }
 
     componentDidMount() {
@@ -33,6 +32,7 @@ class Weather extends React.Component {
       }
 
     render() {
+        console.log("!!!!!!!!!!!!!!!");
         if (this.state.loaded) {
             return (
                 <>
